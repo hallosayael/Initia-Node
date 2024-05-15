@@ -92,12 +92,12 @@ sudo systemctl start initiad && sudo journalctl -fu initiad -o cat
 source $HOME/.bash_profile
 ```
 
-Syncing blocks.
+### Syncing blocks
 ```
 initiad status 2>&1 | jq .sync_info
 ```
 
-### We Will Give You 2 Option [ Create Wallet or Import Private Key ]
+## We Will Give You 2 Option [ Create Wallet or Import Private Key ]
 
 ### to create a new wallet, use the following command. don’t forget to save the mnemonic
 ```
