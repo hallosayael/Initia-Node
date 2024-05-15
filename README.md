@@ -82,11 +82,9 @@ sudo systemctl daemon-reload && \
 sudo systemctl enable initiad && \
 sudo systemctl start initiad && sudo journalctl -fu initiad -o cat
 ```
-## Snapshot
-```
-curl -L https://snapshots.kzvn.xyz/initia/initiation-1_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/.initia
-mv $HOME/.initia/priv_validator_state.json.backup $HOME/.initia/data/priv_validator_state.json
-```
+## TUNGGU SAMPAI SYNCED
+-------------------------------------------------------------------------------------------
+## ADDITIONAL
 
 ## Post Installation
 
@@ -144,3 +142,4 @@ initiad tx mstaking create-validator \
 --gas-prices 0.15uinit \
 -y
 ```
+Source for snapshot: https://docs.nodex.one/networks/testnet/initia/snapshot
