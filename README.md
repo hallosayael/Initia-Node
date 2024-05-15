@@ -99,29 +99,20 @@ initiad status 2>&1 | jq .sync_info
 
 ### We Will Give You 2 Option [ Create Wallet or Import Private Key ]
 
-### Create Wallet
-Create New Wallet & Don't Forget Save Phrase
+### to create a new wallet, use the following command. don’t forget to save the mnemonic
 ```
-initiad keys add (yourname)
+initiad keys add $WALLET
 ```
 
-### Recover Phrase
+### to restore exexuting wallet, use the following command
 ```
 initiad keys add $WALLET --recover
 ```
 
-To get current list your address 
+# to get current list your address 
 ```
 initiad keys list
 ```
-
-
-### Import Private Key From Metamask
-```
-initiad keys unsafe-import-eth-key $WALLET <private-key> --keyring-backend file
-```
-
-Change private-key to your private key
 
 ### Running Validators 
 ```
