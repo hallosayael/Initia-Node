@@ -42,6 +42,11 @@ initiad init (yourname)  --chain-id initiation-1
 ```
 curl -Ls https://initia.s3.ap-southeast-1.amazonaws.com/initiation-1/genesis.json > $HOME/.initia/config/genesis.json
 ```
+## Snapshot
+```
+curl -L https://snapshots.kzvn.xyz/initia/initiation-1_latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/.initia
+mv $HOME/.initia/priv_validator_state.json.backup $HOME/.initia/data/priv_validator_state.json
+```
 ## Settings Gas Fee
 ```
 # setting minimum-gas-prices = "0.15uinit,0.01uusdc"
