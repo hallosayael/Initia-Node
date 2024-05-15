@@ -109,7 +109,7 @@ initiad keys add $WALLET
 initiad keys add $WALLET --recover
 ```
 
-# to get current list your address 
+### to get current list your address 
 ```
 initiad keys list
 ```
