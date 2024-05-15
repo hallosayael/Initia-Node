@@ -86,11 +86,31 @@ sudo systemctl start initiad && sudo journalctl -fu initiad -o cat
 -------------------------------------------------------------------------------------------
 ## ADDITIONAL
 
-## Post Installation
+### FOR USE SNAPSHOT, FOLLOW THIS INSTRUCTION
+
+## Reset blockchain data
 
 ```
-source $HOME/.bash_profile
+sudo systemctl stop initia
+cp $HOME/.initia/data/priv_validator_state.json $HOME/.initia/priv_validator_state.json.backup
+rm -rf $HOME/.initia/data
 ```
+## Download snapshot
+```
+curl https://testnet-files.itrocket.net/initia/snap_initia.tar.lz4 | lz4 -dc - | tar -xf - -C $HOME/.initia
+```
+## Backup state data
+```
+mv $HOME/.initia/priv_validator_state.json.backup $HOME/.initia/data/priv_validator_state.json
+```
+## Restart node
+```
+sudo systemctl restart initia
+```
+# BUT IF YOU FIND ERROR LIKE THIS :
+failed to initialize database: file missing
+initiad.service: Main process exited, code=exited, status=1/FAILURE
+initiad.service: Failed with result 'exit-code'.
 
 ### Syncing blocks
 ```
