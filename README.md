@@ -87,7 +87,7 @@ source $HOME/.bash_profile
 
 Syncing blocks.
 ```
-initiad status 2>&1 | jq .SyncInfo
+initiad status 2>&1 | jq .sync_info
 ```
 
 ### We Will Give You 2 Option [ Create Wallet or Import Private Key ]
