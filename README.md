@@ -111,6 +111,17 @@ sudo systemctl restart initia
 failed to initialize database: file missing
 initiad.service: Main process exited, code=exited, status=1/FAILURE
 initiad.service: Failed with result 'exit-code'.
+# FOLLOW THE STEPS BELOW
+```
+sudo systemctl stop initiad
+```
+```
+lz4 -d -c ./latest_snapshot.tar.lz4 | tar -xf - -C $HOME/.initia
+```
+## MOVE TO YOUR SCREEN AND PASTE THIS COMMAND
+```
+sudo systemctl restart initiad && sudo journalctl -u initiad -f -o cat
+```
 
 ### Syncing blocks
 ```
