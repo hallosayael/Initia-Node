@@ -133,4 +133,15 @@ initiad tx mstaking create-validator \
 --gas-prices 0.15uinit \
 -y
 ```
+
+### Delete Node
+```
+sudo systemctl stop initiad
+sudo systemctl disable initiad
+sudo rm -rf /etc/systemd/system/initiad.service
+sudo rm $(which initiad)
+sudo rm -rf $HOME/.initia
+sed -i "/INITIA_/d" $HOME/.bash_profile
+```
+
 Source for snapshot: https://docs.nodex.one/networks/testnet/initia/snapshot
